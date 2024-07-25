@@ -1,3 +1,5 @@
+/* Existing styles... */
+
 /* Reset and general styles */
 * {
     box-sizing: border-box;
@@ -7,168 +9,251 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f4f4f9;
     color: #333;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 20px;
 }
 
-.cart {
-    margin-bottom: 20px;
+/* General layout styles */
+.cart, .pizzas {
+    margin-top: 30px;
+    text-align: center;
 }
 
+.cart h2, .pizzas h2, .order-history h2 {
+    color: #e74c3c;
+}
+
+/* Cart table styles */
 table {
     width: 100%;
-    margin-bottom: 20px;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #007bff;
+    background-color: #f16c6c;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #fff6f6;
 }
 
+/* Message box style */
 .message {
-    padding: 10px;
-    background-color: #ffc107;
+    padding: 15px;
+    background-color: #ffdd57;
     color: #333;
-    border: 1px solid #ffc107;
-    margin-bottom: 10px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
+/* Pizza card styles */
 .pizza {
-    margin: 10px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pizza:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .pizza img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    border-radius: 5px 5px 0 0;
-    max-height: 150px;
-    align-self: center;
+    border-radius: 10px;
 }
 
 .pizza h5 {
     margin-top: 10px;
-    font-size: 18px;
-    text-align: center;
+    font-size: 22px;
+    color: #e74c3c;
 }
 
 .pizza span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
 }
 
 .pizza strong {
-    font-size: 16px;
-    color: #dc3545;
-    text-align: center;
+    font-size: 20px;
+    color: #2ecc71;
 }
 
 .pizza .btn-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
+/* Button styles */
 .btn, .pay-btn {
-    background-color: #28a745;
+    background-color: #e67e22;
     color: white;
     border: none;
-    padding: 15px 25px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 10px;
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover, .pay-btn:hover {
-    background-color: #218838;
+    background-color: #d35400;
+    transform: scale(1.05);
 }
 
 .remove-btn {
-    background-color: #dc3545;
+    background-color: #c0392b;
     color: white;
     border: none;
-    padding: 15px 25px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 10px;
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .remove-btn:hover {
-    background-color: #c82333;
+    background-color: #a93226;
+    transform: scale(1.05);
 }
 
 h1, h2, h5 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
-    color: #007bff;
+    color: #e74c3c;
 }
 
 .Shopname {
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #6b6b6b;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 .Shopname h1 {
-    font-size: 32px;
-    margin-bottom: 5px;
-    color: #ff780a;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #f39c12;
 }
 
 .slogan {
-    font-size: 18px;
-    color: #f8f9fa;
+    font-size: 20px;
+    color: #ecf0f1;
 }
 
 .footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 30px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
 .footer p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .pizza-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .Shopname h1 {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+
+    .pizza h5 {
+        font-size: 18px;
+    }
+
+    .pizza span {
+        font-size: 16px;
+    }
+
+    .pizza strong {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn, .pay-btn, .remove-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .pizza h5 {
+        font-size: 16px;
+    }
+
+    .pizza span, .pizza strong {
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
 
 [x-cloak] {
     display: none !important;
+}
+
+/* Order History Button Styles */
+.order-history-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.order-history-button .btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.order-history-button .btn:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
 }

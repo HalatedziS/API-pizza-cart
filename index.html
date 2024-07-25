@@ -22,7 +22,7 @@
                 <div>
                     username: <input type="text" x-model="username">
                     <button x-on:click="login" x-show="!cartId">Login</button>
-                    <button x-on:click="logout" x-show="username && cartId" >Logout</button>
+                    <button x-on:click="logout" x-show="username && cartId">Logout</button>
                 </div>
                 <div x-show="cartId">
                     Cart code: <span x-text="cartId"></span>
@@ -56,7 +56,6 @@
                             <td x-text="pizza.total"></td>
                         </tr>
                     </template>
-            
                     <tr>
                         <td colspan="3">Total</td>
                         <td colspan="2">R <span x-text="cartTotal"></span></td>
@@ -70,7 +69,30 @@
                     </tr>
                 </tbody>
             </table>
-            
+        </div>
+
+        <!-- Order History Button -->
+        <div class="order-history-button" x-show="paymentSuccessful">
+            <button class="btn" x-on:click="showOrderHistory()">View Order History</button>
+        </div>
+
+        <!-- Order History Section -->
+        <div class="order-history" x-show="showHistory">
+            <h2>Order History</h2>
+            <template x-for="order in orderHistory">
+                <div class="order">
+                    <h3>Order ID: <span x-text="order.id"></span></h3>
+                    <p>Total: R <span x-text="order.total"></span></p>
+                    <h4>Pizzas Ordered:</h4>
+                    <ul>
+                        <template x-for="pizza in order.pizzas">
+                            <li>
+                                <span x-text="pizza.flavour"></span> - <span x-text="pizza.size"></span> (Qty: <span x-text="pizza.qty"></span>)
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
         </div>
     </div>
 
@@ -80,18 +102,15 @@
             <div class="pizza">
                 <img src="Pizza 3.png" alt="Pizza Image">
                 <h5 x-text="pizza.flavour"></h5>
-                <!-- <span x-text="pizza.id"></span> -->
                 <span x-text="pizza.size"></span>
-                <strong>
-                    R <span x-text="pizza.price"></span>
-                </strong>
+                <strong>R <span x-text="pizza.price"></span></strong>
                 <div class="btn-container">
                     <button class="btn" x-on:click="addPizzaToCart(pizza.id)">Add to cart</button>
                 </div>
             </div>
         </template>
     </div>
-    
+
     <footer class="footer">
         <div class="container">
             <h3>Contact Details</h3>
@@ -100,7 +119,6 @@
             <p>Address: 14 Matumie ave, WeltevredenPark, Johannesburg</p>
         </div>
     </footer>
-
 </body>
 
 </html>
