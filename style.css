@@ -1,6 +1,3 @@
-/* Existing styles... */
-
-/* Reset and general styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -256,4 +253,54 @@ h1, h2, h5 {
 .order-history-button .btn:hover {
     background-color: #27ae60;
     transform: scale(1.05);
+}
+
+/* Featured Pizzas Section */
+.featured-pizzas {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.featured-pizzas h2 {
+    color: #e74c3c;
+}
+
+/* Featured Pizza Card Styles */
+.featured-pizzas .pizza {
+    display: inline-block;
+    width: 280px; 
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-pizzas .pizza img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    border-radius: 10px;
+}
+
+.featured-pizzas .pizza h5 {
+    margin-top: 10px;
+    font-size: 20px; 
+    color: #e74c3c;
+}
+
+.featured-pizzas .pizza span {
+    font-size: 16px; 
+}
+
+.featured-pizzas .pizza strong {
+    font-size: 18px; 
+    color: #2ecc71;
+}
+
+.featured-pizzas .btn-container {
+    margin-top: 15px;
 }
